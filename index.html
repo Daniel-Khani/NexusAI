@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NEXUS AI — Your Intelligent Workspace</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar" id="sidebar">
+
+            <div class="brand">
+                <div class="brand-icon">N</div>
+                <div>
+                    <h2>NEXUS<span>AI</span></h2>
+                    <small>INTELLIGENCE WORKSPACE</small>
+                </div>
+            </div>
+
+            <button class="new-chat" id="newChatButton">
+                <span>＋</span> New conversation
+            </button>
+
+            <div class="sidebar-label">WORKSPACE</div>
+
+            <nav class="navigation">
+                <button class="nav-item active" data-tool="chat">
+                    <span>◈</span> AI Assistant
+                </button>
+
+                <button class="nav-item" data-tool="writing">
+                    <span>✎</span> Writing Studio
+                </button>
+
+                <button class="nav-item" data-tool="ideas">
+                    <span>✧</span> Idea Generator
+                </button>
+
+                <button class="nav-item" data-tool="research">
+                    <span>⌕</span> Research
+                </button>
+            </nav>
+
+            <div class="sidebar-label history-label">RECENT CHATS</div>
+
+            <div class="chat-history" id="chatHistory"></div>
+
+            <div class="sidebar-bottom">
+                <div class="user-card">
+                    <div class="avatar">G</div>
+                    <div class="user-info">
+                        <strong>Guest User</strong>
+                        <small>Personal workspace</small>
+                    </div>
+                    <span class="user-menu">•••</span>
+                </div>
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main">
+
+            <header class="topbar">
+
+                <button class="mobile-menu" id="mobileMenu">☰</button>
+
+                <div class="breadcrumb">
+                    <span>Workspace</span>
+                    <span class="breadcrumb-separator">/</span>
+                    <strong>AI Assistant</strong>
+                </div>
+
+                <div class="topbar-actions">
+                    <div class="status">
+                        <span class="status-dot"></span>
+                        SYSTEM READY
+                    </div>
+
+                    <button class="icon-button" id="clearButton" title="Clear conversation">
+                        ↺
+                    </button>
+                </div>
+
+            </header>
+
+
+            <!-- CHAT AREA -->
+            <section class="chat-area" id="chatArea">
+
+                <div class="welcome" id="welcome">
+
+                    <div class="welcome-symbol">
+                        <div class="symbol-core">N</div>
+                        <div class="symbol-ring ring-one"></div>
+                        <div class="symbol-ring ring-two"></div>
+                    </div>
+
+                    <div class="eyebrow">
+                        YOUR INTELLIGENT WORKSPACE
+                    </div>
+
+                    <h1>
+                        Think bigger.<br>
+                        <span>Create beyond.</span>
+                    </h1>
+
+                    <p class="welcome-description">
+                        Your ideas deserve more than ordinary answers.
+                        Start a conversation and explore what's possible.
+                    </p>
+
+                    <div class="suggestions">
+
+                        <button class="suggestion-card" data-prompt="Help me build a professional website from scratch.">
+                            <span class="suggestion-icon purple">⌘</span>
+                            <strong>Build something</strong>
+                            <small>Create a website or application</small>
+                            <span class="suggestion-arrow">↗</span>
+                        </button>
+
+                        <button class="suggestion-card" data-prompt="Give me five original startup ideas with real potential.">
+                            <span class="suggestion-icon blue">✧</span>
+                            <strong>Explore ideas</strong>
+                            <small>Discover new possibilities</small>
+                            <span class="suggestion-arrow">↗</span>
+                        </button>
+
+                        <button class="suggestion-card" data-prompt="Help me learn a difficult topic step by step.">
+                            <span class="suggestion-icon pink">⌁</span>
+                            <strong>Learn something</strong>
+                            <small>Understand complex topics</small>
+                            <span class="suggestion-arrow">↗</span>
+                        </button>
+
+                        <button class="suggestion-card" data-prompt="Help me write a professional and engaging article.">
+                            <span class="suggestion-icon orange">✎</span>
+                            <strong>Create content</strong>
+                            <small>Turn thoughts into words</small>
+                            <span class="suggestion-arrow">↗</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Messages -->
+                <div class="messages" id="messages"></div>
+
+            </section>
+
+
+            <!-- INPUT AREA -->
+            <footer class="input-section">
+
+                <div class="input-container">
+
+                    <textarea
+                        id="messageInput"
+                        placeholder="Message NEXUS AI..."
+                        rows="1"
+                    ></textarea>
+
+                    <div class="input-toolbar">
+
+                        <div class="input-tools">
+                            <button class="tool-button" id="attachButton" title="Attach file">
+                                ＋
+                            </button>
+
+                            <span class="input-hint">AI workspace</span>
+                        </div>
+
+                        <button class="send-button" id="sendButton" title="Send message">
+                            ↑
+                        </button>
+
+                    </div>
+
+                    <input type="file" id="fileInput" hidden>
+
+                </div>
+
+                <p class="disclaimer">
+                    NEXUS AI can make mistakes. Verify important information.
+                </p>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
